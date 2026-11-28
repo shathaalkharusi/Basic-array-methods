@@ -5,7 +5,10 @@
 // - If there is no such product, return null.
 
 function getPriceOf(products, name) {
-  // your code
+ const product= products.find(product=>product.name===name);
+ if(product) return product.price;
+ return null;
+  
 }
 
 const products = [

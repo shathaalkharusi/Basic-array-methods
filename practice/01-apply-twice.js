@@ -5,8 +5,12 @@
 // - applyTwice(3, (n) => n * 2): 3 becomes 6, then 12.
 
 function applyTwice(value, action) {
-  // your code
+  const first = action(value);
+  const result = action(first);
+  return result;
+  
 }
+/* return action(action value);*/
 
 // Expected output:
 console.log(applyTwice(3, (n) => n * 2));      // 12

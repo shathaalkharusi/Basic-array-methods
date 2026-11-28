@@ -5,7 +5,9 @@
 // - If there is no such user, return null.
 
 function getCityOf(users, name) {
-  // your code
+ const user= users.find(user=>user.name===name);
+ if(user) return user.city;
+ return null;
 }
 
 const users = [

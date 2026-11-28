@@ -5,7 +5,9 @@
 // - Nobody matches: return 0.
 
 function countCity(users, city) {
-  // your code
+  let count=0;
+  users.forEach(user=> {if (user.city=== city) count++});
+  return count;
 }
 
 const users = [

@@ -5,7 +5,10 @@
 // - Nobody is an adult: return 0.
 
 function sumAdultAges(users) {
-  // your code
+ const adult = users.filter(user=> user.age>= 18);
+ let total = 0;
+ adult.forEach(user=> total+= user.age);
+ return total;
 }
 
 const users = [

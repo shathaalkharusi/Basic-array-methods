@@ -4,7 +4,7 @@
 // - Use filter.
 
 function getTeens(users) {
-  // your code
+return users.filter(user=> user.age>= 13 && user.age <= 19);
 }
 
 const users = [

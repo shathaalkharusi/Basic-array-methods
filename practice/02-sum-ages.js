@@ -5,7 +5,9 @@
 // - Empty array: return 0.
 
 function sumAges(users) {
-  // your code
+  let total=0;
+  users.forEach(u => total+= u.age);
+  return total;
 }
 
 const users = [

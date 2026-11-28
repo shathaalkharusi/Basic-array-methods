@@ -5,7 +5,14 @@
 // - Nobody matches: return [].
 
 function getNamesFromCity(users, city) {
-  // your code
+  const filteredUsers = users.filter((user) => user.city === city);
+  const names = [];
+
+  filteredUsers.forEach((user) => {
+    names.push(user.name);
+  });
+
+  return names;
 }
 
 const users = [
@@ -16,6 +23,6 @@ const users = [
 const oneUser = [{ name: "Tim", age: 10, city: "Sohar" }];
 
 // Expected output:
-console.log(getNamesFromCity(users, "Muscat"));   // ["Ann", "Cid"]
-console.log(getNamesFromCity(users, "Salalah"));  // ["Bob"]
-console.log(getNamesFromCity(users, "Nizwa"));    // []
+console.log(getNamesFromCity(users, "Muscat")); // ["Ann", "Cid"]
+console.log(getNamesFromCity(users, "Salalah")); // ["Bob"]
+console.log(getNamesFromCity(users, "Nizwa")); // []

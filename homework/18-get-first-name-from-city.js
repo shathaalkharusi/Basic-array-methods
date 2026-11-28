@@ -5,7 +5,9 @@
 // - If nobody lives there, return null.
 
 function getFirstNameFromCity(users, city) {
-  // your code
+ const firstName = users.find(user=> user.city === city);
+ if(firstName) return firstName.name;
+ return null;
 }
 
 const users = [

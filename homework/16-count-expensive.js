@@ -4,7 +4,7 @@
 // - Use filter and .length.
 
 function countExpensive(products, limit) {
-  // your code
+  return products.filter(product=> product.price > limit).length;
 }
 
 const products = [
